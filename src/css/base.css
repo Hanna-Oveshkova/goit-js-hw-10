@@ -1,7 +1,17 @@
 :root {
   /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
@@ -21,7 +31,11 @@ body {
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
-  margin: 0;
+  margin-left: 156px;
+  margin-top: 36px;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  align-items: flex-start;
 }
 
 main {
@@ -29,4 +43,74 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+
+#datetime-picker {
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+
+.flatpickr-calendar {
+  background-color: #f5f5f5;
+}
+
+#datetime-picker:hover {
+  border-color: #000;
+}
+
+#datetime-picker:focus {
+  outline: none;
+  border-color: #4e75ff;
+}
+
+button[data-start] {
+  width: 75px;
+  height: 40px;
+  margin-left: 8px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #4e75ff;
+  color: #fff;
+
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button[data-start]:hover {
+  background: #6c8cff;
+}
+
+button[data-start]:disabled {
+  background: #cfcfcf;
+  cursor: not-allowed;
+}
+
+.timer {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.value {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.label {
+  font-size: 16px;
+  text-transform: uppercase;
+  align-items: flex-start;
 }
