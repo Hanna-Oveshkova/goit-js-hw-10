@@ -5,6 +5,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const startBtn = document.querySelector('[data-start]');
 const input = document.querySelector('#datetime-picker');
+startBtn.disabled = true;
 const days = document.querySelector('[data-days]');
 const hours = document.querySelector('[data-hours]');
 const minutes = document.querySelector('[data-minutes]');
@@ -50,7 +51,7 @@ startBtn.addEventListener('click', () => {
     hours.textContent = addLeadingZero(time.hours);
     minutes.textContent = addLeadingZero(time.minutes);
     seconds.textContent = addLeadingZero(time.seconds);
-  });
+  }, 1000);
 });
 
 function convertMs(ms) {
